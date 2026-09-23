@@ -1,9 +1,11 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Noah | Projects, Railfanning & More</title>
+
+  <title>Noah | Personal Website</title>
 
   <style>
     * {
@@ -29,29 +31,44 @@
     body {
       font-family: Arial, Helvetica, sans-serif;
       background:
-        radial-gradient(circle at top right, rgba(53,167,255,.15), transparent 35%),
-        radial-gradient(circle at bottom left, rgba(255,77,90,.08), transparent 30%),
+        radial-gradient(
+          circle at top right,
+          rgba(53,167,255,.15),
+          transparent 35%
+        ),
+        radial-gradient(
+          circle at bottom left,
+          rgba(255,77,90,.08),
+          transparent 30%
+        ),
         var(--bg);
+
       color: var(--text);
       line-height: 1.6;
     }
 
-    /* NAVIGATION */
+    /* =========================
+       NAVIGATION
+    ========================= */
 
     nav {
       position: fixed;
       top: 0;
       width: 100%;
       z-index: 1000;
+
       background: rgba(7,17,31,.88);
       backdrop-filter: blur(12px);
+
       border-bottom: 1px solid var(--border);
     }
 
     .nav-container {
       max-width: 1200px;
       margin: auto;
+
       padding: 15px 25px;
+
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -69,6 +86,7 @@
 
     nav ul {
       list-style: none;
+
       display: flex;
       gap: 25px;
     }
@@ -76,7 +94,9 @@
     nav a {
       color: var(--text);
       text-decoration: none;
+
       font-size: .95rem;
+
       transition: .2s;
     }
 
@@ -84,14 +104,19 @@
       color: var(--cyan);
     }
 
-    /* HERO */
+    /* =========================
+       HERO
+    ========================= */
 
     .hero {
       min-height: 100vh;
+
       display: flex;
       align-items: center;
       justify-content: center;
+
       text-align: center;
+
       padding: 120px 25px 70px;
     }
 
@@ -101,18 +126,26 @@
 
     .badge {
       display: inline-block;
+
       padding: 7px 15px;
+
       border: 1px solid rgba(66,232,255,.4);
       border-radius: 50px;
+
       color: var(--cyan);
+
       background: rgba(66,232,255,.07);
+
       margin-bottom: 20px;
+
       font-size: .9rem;
     }
 
     .hero h1 {
       font-size: clamp(3rem, 8vw, 6.5rem);
+
       line-height: .95;
+
       margin-bottom: 25px;
     }
 
@@ -122,25 +155,36 @@
 
     .hero p {
       color: var(--muted);
+
       font-size: 1.2rem;
+
       max-width: 700px;
+
       margin: auto;
     }
 
     .buttons {
       margin-top: 35px;
+
       display: flex;
       justify-content: center;
+
       gap: 15px;
+
       flex-wrap: wrap;
     }
 
     .btn {
       display: inline-block;
+
       padding: 13px 22px;
+
       border-radius: 10px;
+
       text-decoration: none;
+
       font-weight: bold;
+
       transition: .2s;
     }
 
@@ -151,7 +195,9 @@
 
     .btn-secondary {
       border: 1px solid var(--border);
+
       color: white;
+
       background: rgba(255,255,255,.04);
     }
 
@@ -159,11 +205,15 @@
       transform: translateY(-3px);
     }
 
-    /* GENERAL */
+    /* =========================
+       GENERAL
+    ========================= */
 
     section {
       max-width: 1200px;
+
       margin: auto;
+
       padding: 90px 25px;
     }
 
@@ -173,44 +223,57 @@
 
     .section-title small {
       color: var(--cyan);
+
       text-transform: uppercase;
+
       letter-spacing: 2px;
     }
 
     .section-title h2 {
       font-size: 2.7rem;
+
       margin-top: 5px;
     }
 
     .section-title p {
       color: var(--muted);
+
       max-width: 700px;
+
       margin-top: 10px;
     }
 
-    /* ABOUT */
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 25px;
-    }
+    /* =========================
+       CARDS
+    ========================= */
 
     .card {
-      background: linear-gradient(145deg, var(--card), var(--bg2));
+      background:
+        linear-gradient(
+          145deg,
+          var(--card),
+          var(--bg2)
+        );
+
       border: 1px solid var(--border);
+
       border-radius: 18px;
+
       padding: 28px;
+
       transition: .25s;
     }
 
     .card:hover {
       transform: translateY(-5px);
-      border-color: rgba(53,167,255,.45);
+
+      border-color:
+        rgba(53,167,255,.45);
     }
 
     .card h3 {
       margin-bottom: 10px;
+
       font-size: 1.4rem;
     }
 
@@ -218,21 +281,41 @@
       color: var(--muted);
     }
 
-    /* INTERESTS */
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about-grid {
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 25px;
+    }
+
+    /* =========================
+       INTERESTS
+    ========================= */
 
     .interest-grid {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
       gap: 18px;
     }
 
     .interest {
       text-align: center;
+
       padding: 28px 18px;
     }
 
     .interest .icon {
       font-size: 3rem;
+
       margin-bottom: 12px;
     }
 
@@ -242,29 +325,43 @@
 
     .interest p {
       color: var(--muted);
+
       font-size: .9rem;
     }
 
-    /* PROJECTS */
+    /* =========================
+       PROJECTS
+    ========================= */
 
     .projects {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
       gap: 25px;
     }
 
     .project {
       position: relative;
+
       overflow: hidden;
     }
 
     .project-tag {
       display: inline-block;
+
       padding: 5px 10px;
+
       border-radius: 20px;
-      background: rgba(53,167,255,.12);
+
+      background:
+        rgba(53,167,255,.12);
+
       color: var(--cyan);
+
       font-size: .75rem;
+
       margin-bottom: 15px;
     }
 
@@ -276,13 +373,20 @@
       margin-top: 10px;
     }
 
-    /* RAILFANNING */
+    /* =========================
+       RAILFANNING
+    ========================= */
 
     .rail-box {
       border-radius: 22px;
+
       padding: 45px;
+
       background:
-        linear-gradient(rgba(7,17,31,.8), rgba(7,17,31,.95)),
+        linear-gradient(
+          rgba(7,17,31,.8),
+          rgba(7,17,31,.95)
+        ),
         repeating-linear-gradient(
           90deg,
           transparent 0px,
@@ -290,56 +394,81 @@
           rgba(255,255,255,.025) 46px,
           rgba(255,255,255,.025) 48px
         );
+
       border: 1px solid var(--border);
     }
 
     .rail-stats {
       display: grid;
-      grid-template-columns: repeat(4,1fr);
+
+      grid-template-columns:
+        repeat(4,1fr);
+
       gap: 15px;
+
       margin-top: 30px;
     }
 
     .stat {
       padding: 20px;
-      background: rgba(255,255,255,.04);
+
+      background:
+        rgba(255,255,255,.04);
+
       border-radius: 12px;
+
       text-align: center;
     }
 
     .stat strong {
       display: block;
+
       font-size: 1.8rem;
+
       color: var(--cyan);
     }
 
     .stat span {
       color: var(--muted);
+
       font-size: .85rem;
     }
 
-    /* TIMELINE */
+    /* =========================
+       TIMELINE
+    ========================= */
 
     .timeline {
-      border-left: 2px solid var(--blue);
+      border-left:
+        2px solid var(--blue);
+
       padding-left: 25px;
     }
 
     .timeline-item {
       margin-bottom: 30px;
+
       position: relative;
     }
 
     .timeline-item::before {
       content: "";
+
       width: 12px;
       height: 12px;
+
       background: var(--blue);
+
       border-radius: 50%;
+
       position: absolute;
+
       left: -32px;
       top: 7px;
-      box-shadow: 0 0 15px rgba(53,167,255,.7);
+
+      box-shadow:
+        0 0 15px
+        rgba(53,167,255,.7);
     }
 
     .timeline-item h3 {
@@ -350,27 +479,196 @@
       color: var(--muted);
     }
 
-    /* CONTACT */
+    /* =========================
+       PRIVATE SECTION
+    ========================= */
+
+    .private-box {
+      max-width: 850px;
+
+      margin: auto;
+
+      padding: 45px;
+
+      border-radius: 20px;
+
+      background:
+        linear-gradient(
+          145deg,
+          var(--card),
+          var(--bg2)
+        );
+
+      border: 1px solid var(--border);
+    }
+
+    .password-area {
+      text-align: center;
+    }
+
+    .lock-icon {
+      font-size: 4rem;
+
+      margin-bottom: 15px;
+    }
+
+    .password-area h3 {
+      font-size: 1.7rem;
+
+      margin-bottom: 10px;
+    }
+
+    .password-area p {
+      color: var(--muted);
+
+      margin-bottom: 20px;
+    }
+
+    .password-input {
+      width: 100%;
+
+      max-width: 350px;
+
+      padding: 14px;
+
+      border-radius: 10px;
+
+      border: 1px solid var(--border);
+
+      background: #07111f;
+
+      color: white;
+
+      font-size: 1rem;
+
+      outline: none;
+    }
+
+    .password-input:focus {
+      border-color: var(--cyan);
+
+      box-shadow:
+        0 0 15px
+        rgba(66,232,255,.15);
+    }
+
+    .password-button {
+      border: none;
+
+      cursor: pointer;
+
+      font-family: inherit;
+    }
+
+    .wrong-password {
+      display: none;
+
+      color: #ff6b73;
+
+      margin-top: 15px;
+    }
+
+    .private-content {
+      display: none;
+    }
+
+    .private-header {
+      text-align: center;
+
+      margin-bottom: 35px;
+    }
+
+    .private-heart {
+      font-size: 4rem;
+
+      margin-bottom: 10px;
+    }
+
+    .private-header h2 {
+      font-size: 3rem;
+
+      margin-top: 10px;
+    }
+
+    .private-header p {
+      color: var(--muted);
+
+      max-width: 650px;
+
+      margin: 15px auto 0;
+    }
+
+    .private-grid {
+      display: grid;
+
+      grid-template-columns:
+        1fr 1fr;
+
+      gap: 20px;
+    }
+
+    .private-card {
+      background:
+        rgba(255,255,255,.035);
+
+      border: 1px solid var(--border);
+
+      border-radius: 15px;
+
+      padding: 25px;
+    }
+
+    .private-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .private-card p {
+      color: var(--muted);
+    }
+
+    .private-card strong {
+      color: var(--cyan);
+    }
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact-box {
+      max-width: 750px;
+
+      margin: auto;
+
+      padding: 45px;
+
+      border-radius: 20px;
+
+      background:
+        linear-gradient(
+          145deg,
+          var(--card),
+          var(--bg2)
+        );
+
+      border: 1px solid var(--border);
+    }
 
     .contact {
       text-align: center;
     }
 
-    .contact-box {
-      max-width: 750px;
-      margin: auto;
-      padding: 45px;
-      border-radius: 20px;
-      background: linear-gradient(145deg, var(--card), var(--bg2));
-      border: 1px solid var(--border);
-    }
-
-    /* FOOTER */
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
       text-align: center;
+
       padding: 35px 20px;
-      border-top: 1px solid var(--border);
+
+      border-top:
+        1px solid var(--border);
+
       color: var(--muted);
     }
 
@@ -378,7 +676,9 @@
       color: var(--cyan);
     }
 
-    /* MOBILE */
+    /* =========================
+       MOBILE
+    ========================= */
 
     @media(max-width: 850px) {
 
@@ -387,41 +687,56 @@
       }
 
       .about-grid,
-      .projects {
+      .projects,
+      .private-grid {
         grid-template-columns: 1fr;
       }
 
       .interest-grid {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns:
+          repeat(2,1fr);
       }
 
       .rail-stats {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns:
+          repeat(2,1fr);
       }
 
-      .rail-box {
+      .rail-box,
+      .private-box,
+      .contact-box {
         padding: 30px 20px;
       }
     }
 
     @media(max-width: 500px) {
 
-      .interest-grid {
-        grid-template-columns: 1fr;
-      }
-
+      .interest-grid,
       .rail-stats {
         grid-template-columns: 1fr;
       }
+
+      .hero h1 {
+        font-size: 3.5rem;
+      }
+
+      .private-header h2 {
+        font-size: 2.3rem;
+      }
     }
+
   </style>
 </head>
 
 <body>
 
-<!-- NAVIGATION -->
+
+<!-- =========================
+     NAVIGATION
+========================= -->
 
 <nav>
+
   <div class="nav-container">
 
     <div class="logo">
@@ -429,19 +744,53 @@
     </div>
 
     <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#interests">Interests</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#railfanning">Railfanning</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#crush">Who I Like</a></li>
+
+      <li>
+        <a href="#about">
+          About
+        </a>
+      </li>
+
+      <li>
+        <a href="#interests">
+          Interests
+        </a>
+      </li>
+
+      <li>
+        <a href="#projects">
+          Projects
+        </a>
+      </li>
+
+      <li>
+        <a href="#railfanning">
+          Railfanning
+        </a>
+      </li>
+
+      <li>
+        <a href="#crush">
+          Who I Like
+        </a>
+      </li>
+
+      <li>
+        <a href="#contact">
+          Contact
+        </a>
+      </li>
+
     </ul>
 
   </div>
+
 </nav>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
 <header class="hero">
 
@@ -456,18 +805,27 @@
     </h1>
 
     <p>
-      Railfan, creator, builder, disc golfer, technology enthusiast,
-      and someone who is always working on the next project.
+      Railfan, creator, builder, disc golfer,
+      technology enthusiast, and someone who is
+      always working on the next project.
     </p>
 
     <div class="buttons">
-      <a href="#projects" class="btn btn-primary">
+
+      <a
+        href="#projects"
+        class="btn btn-primary"
+      >
         Explore My Projects
       </a>
 
-      <a href="#about" class="btn btn-secondary">
+      <a
+        href="#about"
+        class="btn btn-secondary"
+      >
         About Me
       </a>
+
     </div>
 
   </div>
@@ -475,62 +833,94 @@
 </header>
 
 
-<!-- ABOUT -->
+<!-- =========================
+     ABOUT
+========================= -->
 
 <section id="about">
 
   <div class="section-title">
-    <small>01 — About</small>
-    <h2>A little about me</h2>
+
+    <small>
+      01 — About
+    </small>
+
+    <h2>
+      A little about me
+    </h2>
 
     <p>
-      I like taking ideas and turning them into things that actually work.
-      A lot of my interests combine technology, creativity, and hands-on projects.
+      I like taking ideas and turning them into
+      things that actually work. A lot of my
+      interests combine technology, creativity,
+      and hands-on projects.
     </p>
+
   </div>
 
 
   <div class="about-grid">
 
     <div class="card">
-      <h3>🛠️ I like building things</h3>
+
+      <h3>
+        🛠️ I Like Building Things
+      </h3>
 
       <p>
-        Websites, dashboards, trackers, recording systems, event tools,
-        laser-engraved projects and other custom creations are all part
-        of the stuff I like working on.
+        Websites, dashboards, trackers, recording
+        systems, event tools, laser-engraved projects
+        and other custom creations are all part of
+        the stuff I like working on.
       </p>
+
     </div>
 
 
     <div class="card">
-      <h3>🎥 I'm a creator</h3>
+
+      <h3>
+        🎥 I'm a Creator
+      </h3>
 
       <p>
-        I enjoy recording videos, creating YouTube content, designing
-        thumbnails, building websites, and turning my hobbies into
+        I enjoy recording videos, creating YouTube
+        content, designing thumbnails, building
+        websites, and turning my hobbies into
         projects that other people can see and use.
       </p>
+
     </div>
 
 
     <div class="card">
-      <h3>💻 Technology</h3>
+
+      <h3>
+        💻 Technology
+      </h3>
 
       <p>
-        I enjoy experimenting with computers, scanners, audio equipment,
-        cameras, websites, streaming systems and other technology.
+        I enjoy experimenting with computers,
+        scanners, audio equipment, cameras,
+        websites, streaming systems and other
+        technology.
       </p>
+
     </div>
 
 
     <div class="card">
-      <h3>🚂 Always learning</h3>
+
+      <h3>
+        🚂 Always Learning
+      </h3>
 
       <p>
-        If something interests me, I tend to dig deeper into how it works,
-        experiment with it, and then try to build something around it.
+        If something interests me, I tend to dig
+        deeper into how it works, experiment with it,
+        and then try to build something around it.
       </p>
+
     </div>
 
   </div>
@@ -538,71 +928,168 @@
 </section>
 
 
-<!-- INTERESTS -->
+<!-- =========================
+     INTERESTS
+========================= -->
 
 <section id="interests">
 
   <div class="section-title">
-    <small>02 — Interests</small>
-    <h2>Things I'm into</h2>
+
+    <small>
+      02 — Interests
+    </small>
+
+    <h2>
+      Things I'm Into
+    </h2>
+
   </div>
 
 
   <div class="interest-grid">
 
     <div class="card interest">
-      <div class="icon">🚂</div>
-      <h3>Railfanning</h3>
-      <p>CN trains, defect detectors, scanners and railroad operations.</p>
+
+      <div class="icon">
+        🚂
+      </div>
+
+      <h3>
+        Railfanning
+      </h3>
+
+      <p>
+        CN trains, defect detectors,
+        scanners and railroad operations.
+      </p>
+
     </div>
 
 
     <div class="card interest">
-      <div class="icon">🥏</div>
-      <h3>Disc Golf</h3>
-      <p>Events, disc designs, dyeing, scoring systems and projects.</p>
+
+      <div class="icon">
+        🥏
+      </div>
+
+      <h3>
+        Disc Golf
+      </h3>
+
+      <p>
+        Events, disc designs, dyeing,
+        scoring systems and projects.
+      </p>
+
     </div>
 
 
     <div class="card interest">
-      <div class="icon">💻</div>
-      <h3>Technology</h3>
-      <p>Computers, websites, electronics, software and custom systems.</p>
+
+      <div class="icon">
+        💻
+      </div>
+
+      <h3>
+        Technology
+      </h3>
+
+      <p>
+        Computers, websites, electronics,
+        software and custom systems.
+      </p>
+
     </div>
 
 
     <div class="card interest">
-      <div class="icon">🎮</div>
-      <h3>Minecraft</h3>
-      <p>Minecraft Education projects, clubs, websites and builds.</p>
+
+      <div class="icon">
+        🎮
+      </div>
+
+      <h3>
+        Minecraft
+      </h3>
+
+      <p>
+        Minecraft Education projects,
+        clubs, websites and builds.
+      </p>
+
     </div>
 
 
     <div class="card interest">
-      <div class="icon">🎥</div>
-      <h3>Video</h3>
-      <p>YouTube videos, thumbnails, recording and live streaming.</p>
+
+      <div class="icon">
+        🎥
+      </div>
+
+      <h3>
+        Video
+      </h3>
+
+      <p>
+        YouTube videos, thumbnails,
+        recording and live streaming.
+      </p>
+
     </div>
 
 
     <div class="card interest">
-      <div class="icon">🎛️</div>
-      <h3>Audio</h3>
-      <p>Mixers, microphones, OBS, streaming and audio routing.</p>
+
+      <div class="icon">
+        🎛️
+      </div>
+
+      <h3>
+        Audio
+      </h3>
+
+      <p>
+        Mixers, microphones, OBS,
+        streaming and audio routing.
+      </p>
+
     </div>
 
 
     <div class="card interest">
-      <div class="icon">🔥</div>
-      <h3>Laser Projects</h3>
-      <p>Laser engraving, custom designs and physical creations.</p>
+
+      <div class="icon">
+        🔥
+      </div>
+
+      <h3>
+        Laser Projects
+      </h3>
+
+      <p>
+        Laser engraving, custom designs
+        and physical creations.
+      </p>
+
     </div>
 
 
     <div class="card interest">
-      <div class="icon">🌐</div>
-      <h3>Web Design</h3>
-      <p>Building websites and turning ideas into interactive tools.</p>
+
+      <div class="icon">
+        🌐
+      </div>
+
+      <h3>
+        Web Design
+      </h3>
+
+      <p>
+        Building websites and turning
+        ideas into interactive tools.
+      </p>
+
     </div>
 
   </div>
@@ -610,31 +1097,47 @@
 </section>
 
 
-<!-- PROJECTS -->
+<!-- =========================
+     PROJECTS
+========================= -->
 
 <section id="projects">
 
   <div class="section-title">
-    <small>03 — Projects</small>
-    <h2>Some of my projects</h2>
+
+    <small>
+      03 — Projects
+    </small>
+
+    <h2>
+      Some of My Projects
+    </h2>
 
     <p>
-      A collection of the kinds of projects I've worked on.
+      A collection of the kinds of projects
+      I've worked on.
     </p>
+
   </div>
 
 
   <div class="projects">
 
+
     <div class="card project">
 
-      <span class="project-tag">RAILROADING</span>
+      <span class="project-tag">
+        RAILROADING
+      </span>
 
-      <h3>Noah and Ed's Train Adventures</h3>
+      <h3>
+        Noah and Ed's Train Adventures
+      </h3>
 
       <p>
-        A railfanning project focused on recording and documenting
-        trains, railroad activity, defect detectors and operations.
+        A railfanning project focused on recording
+        and documenting trains, railroad activity,
+        defect detectors and operations.
       </p>
 
     </div>
@@ -642,13 +1145,18 @@
 
     <div class="card project">
 
-      <span class="project-tag">DISC GOLF</span>
+      <span class="project-tag">
+        DISC GOLF
+      </span>
 
-      <h3>Disc Palooza</h3>
+      <h3>
+        Disc Palooza
+      </h3>
 
       <p>
-        A multi-event disc golf competition concept with scoring,
-        timers, leaderboards and administrative tools.
+        A multi-event disc golf competition concept
+        with scoring, timers, leaderboards and
+        administrative tools.
       </p>
 
     </div>
@@ -656,13 +1164,18 @@
 
     <div class="card project">
 
-      <span class="project-tag">DISC GOLF</span>
+      <span class="project-tag">
+        DISC GOLF
+      </span>
 
-      <h3>Throw It</h3>
+      <h3>
+        Throw It
+      </h3>
 
       <p>
-        A disc golf store and brand concept involving custom discs,
-        stamps, ordering systems and web design.
+        A disc golf store and brand concept involving
+        custom discs, stamps, ordering systems
+        and web design.
       </p>
 
     </div>
@@ -670,13 +1183,18 @@
 
     <div class="card project">
 
-      <span class="project-tag">EVENT</span>
+      <span class="project-tag">
+        EVENT
+      </span>
 
-      <h3>The Great Canadian Glide</h3>
+      <h3>
+        The Great Canadian Glide
+      </h3>
 
       <p>
-        A custom disc golf tournament concept with event information,
-        signup tools and printable promotional material.
+        A custom disc golf tournament concept with
+        event information, signup tools and printable
+        promotional material.
       </p>
 
     </div>
@@ -684,13 +1202,17 @@
 
     <div class="card project">
 
-      <span class="project-tag">MINECRAFT</span>
+      <span class="project-tag">
+        MINECRAFT
+      </span>
 
-      <h3>Minecraft Education Club</h3>
+      <h3>
+        Minecraft Education Club
+      </h3>
 
       <p>
-        A Minecraft club system involving leadership roles,
-        documentation, websites and organization.
+        A Minecraft club system involving leadership
+        roles, documentation, websites and organization.
       </p>
 
     </div>
@@ -698,13 +1220,17 @@
 
     <div class="card project">
 
-      <span class="project-tag">CREATIVE TECH</span>
+      <span class="project-tag">
+        CREATIVE TECH
+      </span>
 
-      <h3>Laser Engraving Projects</h3>
+      <h3>
+        Laser Engraving Projects
+      </h3>
 
       <p>
-        Custom engraved projects, YouTube-related creations,
-        signs, plaques and other physical designs.
+        Custom engraved projects, YouTube-related
+        creations, signs, plaques and other designs.
       </p>
 
     </div>
@@ -714,48 +1240,95 @@
 </section>
 
 
-<!-- RAILFANNING -->
+<!-- =========================
+     RAILFANNING
+========================= -->
 
 <section id="railfanning">
 
   <div class="section-title">
-    <small>04 — Railfanning</small>
-    <h2>Railroad life</h2>
+
+    <small>
+      04 — Railfanning
+    </small>
+
+    <h2>
+      Railroad Life
+    </h2>
+
   </div>
 
 
   <div class="rail-box">
 
-    <h2>🚂 Chasing the next train</h2>
+    <h2>
+      🚂 Chasing the Next Train
+    </h2>
 
     <p style="color:var(--muted); margin-top:12px;">
-      Railfanning is one of my biggest hobbies. I enjoy watching,
-      recording and learning about railroad operations, especially
-      CN activity around Manitoba.
+
+      Railfanning is one of my biggest hobbies.
+      I enjoy watching, recording and learning
+      about railroad operations, especially CN
+      activity around Manitoba.
+
     </p>
 
 
     <div class="rail-stats">
 
-      <div class="stat">
-        <strong>CN</strong>
-        <span>Railroad focus</span>
-      </div>
 
       <div class="stat">
-        <strong>MB</strong>
-        <span>Home territory</span>
+
+        <strong>
+          CN
+        </strong>
+
+        <span>
+          Railroad focus
+        </span>
+
       </div>
 
-      <div class="stat">
-        <strong>📻</strong>
-        <span>Scanner monitoring</span>
-      </div>
 
       <div class="stat">
-        <strong>🎥</strong>
-        <span>Video recording</span>
+
+        <strong>
+          MB
+        </strong>
+
+        <span>
+          Home territory
+        </span>
+
       </div>
+
+
+      <div class="stat">
+
+        <strong>
+          📻
+        </strong>
+
+        <span>
+          Scanner monitoring
+        </span>
+
+      </div>
+
+
+      <div class="stat">
+
+        <strong>
+          🎥
+        </strong>
+
+        <span>
+          Video recording
+        </span>
+
+      </div>
+
 
     </div>
 
@@ -764,131 +1337,176 @@
 </section>
 
 
-<!-- JOURNEY -->
+<!-- =========================
+     JOURNEY
+========================= -->
 
 <section>
 
   <div class="section-title">
-    <small>05 — My Journey</small>
-    <h2>How my projects connect</h2>
+
+    <small>
+      05 — My Journey
+    </small>
+
+    <h2>
+      How My Projects Connect
+    </h2>
+
   </div>
 
 
   <div class="timeline">
 
+
     <div class="timeline-item">
-      <h3>🚂 Railfanning</h3>
+
+      <h3>
+        🚂 Railfanning
+      </h3>
+
       <p>
-        Started building an interest around trains, scanners,
-        railroad communications and recording.
+        Started building an interest around trains,
+        scanners, railroad communications and recording.
       </p>
+
     </div>
 
 
     <div class="timeline-item">
-      <h3>🎥 Content Creation</h3>
+
+      <h3>
+        🎥 Content Creation
+      </h3>
+
       <p>
-        Turned those interests into videos, thumbnails,
-        websites and online projects.
+        Turned those interests into videos,
+        thumbnails, websites and online projects.
       </p>
+
     </div>
 
 
     <div class="timeline-item">
-      <h3>💻 Building Systems</h3>
+
+      <h3>
+        💻 Building Systems
+      </h3>
+
       <p>
-        Started creating custom dashboards, trackers,
-        websites and tools instead of simply using existing ones.
+        Started creating custom dashboards,
+        trackers, websites and tools instead of
+        simply using existing ones.
       </p>
+
     </div>
 
 
     <div class="timeline-item">
-      <h3>🥏 Disc Golf Projects</h3>
+
+      <h3>
+        🥏 Disc Golf Projects
+      </h3>
+
       <p>
         Expanded into disc golf events, custom discs,
         scoring systems and physical projects.
       </p>
+
     </div>
 
 
     <div class="timeline-item">
-      <h3>🔥 Making Things</h3>
+
+      <h3>
+        🔥 Making Things
+      </h3>
+
       <p>
-        Combined digital projects with physical creation
-        through laser engraving and custom designs.
+        Combined digital projects with physical
+        creation through laser engraving and
+        custom designs.
       </p>
+
     </div>
+
 
   </div>
 
 </section>
 
-<!-- WHO I LIKE -->
+
+<!-- =========================
+     WHO I LIKE
+========================= -->
 
 <section id="crush">
 
   <div class="section-title">
-    <small>07 — Personal</small>
-    <h2>Who I Like</h2>
+
+    <small>
+      06 — Personal
+    </small>
+
+    <h2>
+      Who I Like
+    </h2>
 
     <p>
-      This section is private. Enter the password to continue.
+      This section is private. Enter the password
+      to continue.
     </p>
+
   </div>
 
-  <div class="contact-box">
+
+  <div class="private-box">
+
 
     <!-- PASSWORD SCREEN -->
 
-    <div id="passwordScreen" style="text-align:center;">
+    <div
+      id="passwordScreen"
+      class="password-area"
+    >
 
-      <div style="font-size:4rem; margin-bottom:15px;">
+      <div class="lock-icon">
         🔒
       </div>
 
-      <h3 style="font-size:1.6rem; margin-bottom:10px;">
+      <h3>
         Private Section
       </h3>
 
-      <p style="color:var(--muted); margin-bottom:20px;">
+      <p>
         Enter the password to view this section.
       </p>
+
 
       <input
         type="password"
         id="crushPassword"
+        class="password-input"
         placeholder="Enter password"
-        style="
-          width:100%;
-          max-width:350px;
-          padding:14px;
-          border-radius:10px;
-          border:1px solid var(--border);
-          background:#07111f;
-          color:white;
-          font-size:1rem;
-          outline:none;
-        "
+        autocomplete="off"
       >
 
-      <br><br>
+
+      <br>
+      <br>
+
 
       <button
         onclick="unlockCrush()"
-        class="btn btn-primary"
-        style="border:none; cursor:pointer;"
+        class="btn btn-primary password-button"
       >
         Unlock
       </button>
 
+
       <p
         id="wrongPassword"
-        style="
-          display:none;
-          color:#ff6b73;
-          margin-top:15px;
-        "
+        class="wrong-password"
       >
         Incorrect password.
       </p>
@@ -900,12 +1518,13 @@
 
     <div
       id="crushContent"
-      style="display:none;"
+      class="private-content"
     >
 
-      <div style="text-align:center;">
 
-        <div style="font-size:4rem; margin-bottom:15px;">
+      <div class="private-header">
+
+        <div class="private-heart">
           ❤️
         </div>
 
@@ -913,76 +1532,82 @@
           PRIVATE
         </span>
 
-        <h2 style="font-size:2.5rem; margin-top:15px;">
+        <h2>
           Macey
         </h2>
 
-        <p
-          style="
-            color:var(--muted);
-            max-width:600px;
-            margin:15px auto 0;
-          "
-        >
-          Macey is the person you've told me you like.
+        <p>
+          Macey is the person you've told me
+          you like.
         </p>
 
       </div>
 
 
-      <div
-        class="about-grid"
-        style="margin-top:35px;"
-      >
+      <div class="private-grid">
 
-        <div class="card">
 
-          <h3>💗 Who</h3>
+        <div class="private-card">
+
+          <h3>
+            💗 Who
+          </h3>
 
           <p>
-            Her name is <strong style="color:var(--cyan);">
-            Macey
+            Her name is
+            <strong>
+              Macey
             </strong>.
           </p>
 
         </div>
 
 
-        <div class="card">
+        <div class="private-card">
 
-          <h3>📝 What I Know</h3>
+          <h3>
+            📝 What I Know
+          </h3>
 
           <p>
-            You've described Macey as your crush and previously
-            asked me to help create a character description involving her.
+            You've told me that Macey is your
+            crush. You previously also asked me
+            about creating a character description
+            involving her.
           </p>
 
         </div>
 
 
-        <div class="card">
+        <div class="private-card">
 
-          <h3>🔐 Why This Is Private</h3>
+          <h3>
+            🔐 Why It's Private
+          </h3>
 
           <p>
-            This information is kept behind the password section
-            so it isn't immediately visible when someone opens your
-            personal website.
+            This information is kept behind the
+            password section instead of appearing
+            on the main page.
           </p>
 
         </div>
 
 
-        <div class="card">
+        <div class="private-card">
 
-          <h3>⭐ Personal Note</h3>
+          <h3>
+            ⭐ Personal Note
+          </h3>
 
           <p>
-            This section is intentionally separate from the rest
-            of the website because it's personal information.
+            This section is intentionally separate
+            from the rest of the website because
+            it's personal information.
           </p>
 
         </div>
+
 
       </div>
 
@@ -992,7 +1617,10 @@
 
 </section>
 
-<!-- CONTACT -->
+
+<!-- =========================
+     CONTACT
+========================= -->
 
 <section id="contact">
 
@@ -1001,13 +1629,22 @@
     <div class="contact">
 
       <div class="section-title">
-        <small>06 — Contact</small>
-        <h2>Want to see what I'm working on?</h2>
+
+        <small>
+          07 — Contact
+        </small>
+
+        <h2>
+          Want to See What I'm Working On?
+        </h2>
 
         <p>
-          Check out my projects, videos and other creations.
+          Check out my projects, videos and
+          other creations.
         </p>
+
       </div>
+
 
       <div class="buttons">
 
@@ -1028,38 +1665,132 @@
 </section>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
   <p>
-    © 2026 <strong>Noah</strong> — Personal Website
+    © 2026 <strong>Noah</strong>
+    — Personal Website
   </p>
 
   <p style="margin-top:6px;">
-    Built around trains, technology, creativity and projects.
+    Built around trains, technology,
+    creativity and projects.
   </p>
 
 </footer>
 
 
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
 <script>
 
-  // Small scroll effect for navigation
+  /* =========================
+     NAVIGATION SHADOW
+  ========================= */
 
-  window.addEventListener("scroll", () => {
+  window.addEventListener(
+    "scroll",
+    () => {
 
-    const nav = document.querySelector("nav");
+      const nav =
+        document.querySelector("nav");
 
-    if (window.scrollY > 30) {
-      nav.style.boxShadow = "0 5px 25px rgba(0,0,0,.25)";
+      if (window.scrollY > 30) {
+
+        nav.style.boxShadow =
+          "0 5px 25px rgba(0,0,0,.25)";
+
+      } else {
+
+        nav.style.boxShadow =
+          "none";
+
+      }
+
+    }
+  );
+
+
+  /* =========================
+     PRIVATE SECTION
+  ========================= */
+
+  function unlockCrush() {
+
+    const password =
+      document
+        .getElementById("crushPassword")
+        .value;
+
+    const passwordScreen =
+      document
+        .getElementById("passwordScreen");
+
+    const crushContent =
+      document
+        .getElementById("crushContent");
+
+    const wrongPassword =
+      document
+        .getElementById("wrongPassword");
+
+
+    /*
+       PASSWORD
+       --------
+       The password is:
+       Noah
+    */
+
+    if (password === "Noah") {
+
+      passwordScreen.style.display =
+        "none";
+
+      crushContent.style.display =
+        "block";
+
+      wrongPassword.style.display =
+        "none";
+
     } else {
-      nav.style.boxShadow = "none";
+
+      wrongPassword.style.display =
+        "block";
+
     }
 
-  });
+  }
+
+
+  /* =========================
+     ENTER KEY SUPPORT
+  ========================= */
+
+  document
+    .getElementById("crushPassword")
+    .addEventListener(
+      "keypress",
+      function(event) {
+
+        if (event.key === "Enter") {
+
+          unlockCrush();
+
+        }
+
+      }
+    );
+
 
 </script>
 
 </body>
 </html>
+```
